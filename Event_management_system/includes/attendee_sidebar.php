@@ -63,40 +63,45 @@
     }
   </style>
 </head>
-<body>
-  <div class="sidebar-attendee">
-      <div class="sidebar-header text-center mb-4">
-          <h4>Attendee Panel</h4>
-          <hr class="border-white">
-      </div>
-      
-      <ul class="nav flex-column">
-          <li class="nav-item">
-              <a class="nav-link active" href="attendee_dashboard.php">
-                  <i class="bi bi-calendar-event me-2"></i> My Events
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="upcoming_events.php">
-                  <i class="bi bi-search me-2"></i> Browse Events
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="notifications.php">
-                  <i class="bi bi-bell me-2"></i> Notifications
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="settings.php">
-                  <i class="bi bi-gear me-2"></i> Settings
-              </a>
-          </li>
-          <li class="nav-item mt-4">
-              <a class="btn btn-light-purple" href="logout.php">
-                  <i class="bi bi-box-arrow-right me-2"></i> Logout
-              </a>
-          </li>
-      </ul>
-  </div>
-</body>
+<!-- includes/attendee_sidebar.php -->
+<div class="sidebar-attendee bg-purple text-white p-3" style="width: 280px; height: 100vh; position: fixed; left: 0; top: 0; z-index: 1000;">
+    <div class="sidebar-header text-center mb-4">
+        <h4>Attendee Panel</h4>
+        <hr class="border-white">
+    </div>
+    
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="my_events.php">
+                <i class="bi bi-calendar-check me-2"></i> My Events
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="upcoming_events.php">
+                <i class="bi bi-search me-2"></i> Browse Events
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="notifications.php">
+                <i class="bi bi-bell me-2"></i> Notifications
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="profile.php">
+                <i class="bi bi-person me-2"></i> Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="settings.php">
+                <i class="bi bi-gear me-2"></i> Settings
+            </a>
+        </li>
+        <li class="nav-item mt-4">
+            <a class="btn btn-light-purple w-100" href="logout.php">
+                <i class="bi bi-box-arrow-right me-2"></i> Logout
+            </a>
+        </li>
+    </ul>
+</div>
+
 </html>
