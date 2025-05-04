@@ -1,0 +1,211 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+    /* Light purple gradient background */
+    background: linear-gradient(135deg, #d1c4e9, #b39ddb, #9575cd, #7e57c2);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s ease infinite;
+  }
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Sticky Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-bottom: 2px solid #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+
+    box-shadow: none;
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #d23acd !important;
+}
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    margin-right: 15px;
+}
+
+/* Main Content Container */
+.main-content, .content-container {
+    padding: 50px 20px;
+    /* Ensure content starts below the sticky header */
+    margin-top: 80px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background: url('assets/images/girl6.jpeg') no-repeat center center;
+    background-size: cover;
+    padding: 50px;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 40px;
+}
+.welcome-section h1,
+.welcome-section h2 {
+    text-align: center;
+}
+
+/* Role Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card .card-body {
+    padding: 20px;
+}
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+}
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Carousel */
+.carousel {
+    margin-bottom: 40px;
+}
+.carousel-item {
+    transition: transform 0.3s ease;
+}
+.carousel-item:hover {
+    transform: scale(1.05);
+}
+/* Buttons – Keeping the “first style” */
+.btn {
+    border-radius: 50px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b, #36d1dc, #5b86e5);
+    color: white;
+    padding: 10px 20px;
+  }
+  .btn:hover {
+    background-color: #ff0000;
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+  }
+  /* Ripple Effect */
+  .btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+  }
+  .btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+  .organizer-footer {
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+    color: #ecf0f1;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    /* Removed fixed positioning so footer is relative and will appear after all content */
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.1);
+}
+
+/* (Optional) Adjust main content container to prevent overlapping if needed */
+.content-area {
+    padding-bottom: 20px;
+}
+/* Ensure html and body fill the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Wrapper for the entire page: header, main content, footer */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Main page content will grow as needed */
+  .content {
+    flex: 1;
+  }
+  
+  /* Footer Styles – now flush to the left and right, at the bottom of the page */
+  .organizer-footer {
+    background: linear-gradient(135deg, #1a2a3a, #2c3e50);
+    color: #ecf0f1;
+    padding: 1.5rem 0;
+    width: 100%;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Optional Divider within Footer */
+  .footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 1rem 0;
+  }
+  
+  /* Social Icons Hover Effects */
+  .social-icon {
+    color: #ff0000;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .social-icon:hover {
+    color: #ffffff;
+    transform: scale(1.2) rotate(10deg);
+  }
+  
+  /* Legal Links in Footer */
+  .legal-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+  }
+  .legal-links a:hover {
+    color: #ffffff;
+  }
+  
+  
+

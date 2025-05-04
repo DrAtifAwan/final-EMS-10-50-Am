@@ -1,0 +1,98 @@
+/* navbar.css */
+/* ======================== */
+/* Base Navbar Styles       */
+/* ======================== */
+.navbar {
+    height: 60px;
+    z-index: 1030;
+    box-shadow: 0 2px 5px rgba(192, 105, 200, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ======================== */
+/* Custom Navbar Styles     */
+/* ======================== */
+.navbar-custom {
+    background-color: rgb(125, 32, 148); /* Dark purple */
+    box-shadow: 0 2px 5px rgba(209, 13, 227, 0.3);
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff !important;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #ddd !important;
+    font-size: 1rem;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.navbar-custom .btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    margin-left: 15px;
+}
+
+.navbar-custom .btn-danger:hover {
+    background-color: #c9302c;
+    border-color: #ac2925;
+}
+
+.navbar-custom .btn-secondary {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    margin-left: 10px;
+}
+
+.navbar-custom .btn-secondary:hover {
+    background-color: #31b0d5;
+    border-color: #269abc;
+}
+
+/* ======================== */
+/* Sidebar Styles           */
+/* ======================== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    bottom: 0;
+    width: 250px;
+    background: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1020;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+/* ======================== */
+/* Responsive Adjustments   */
+/* ======================== */
+@media (max-width: 768px) {
+    .navbar-custom .navbar-brand {
+        font-size: 1.4rem;
+    }
+    
+    .navbar-custom .btn-danger,
+    .navbar-custom .btn-secondary {
+        margin: 5px 0;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+}

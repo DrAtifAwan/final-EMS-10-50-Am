@@ -1,0 +1,132 @@
+:root {
+    --primary-purple: #6a11cb;
+    --secondary-purple: #8a2be2;
+    --dark-bg: #0f0c29;
+    --neon-accent: #b721ff;
+    --glass-bg: rgba(15, 12, 41, 0.7);
+  }
+
+  body {
+    background: linear-gradient(to right, var(--dark-bg), var(--primary-purple));
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    margin-top: 30px;
+  }
+
+  h1 {
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(183, 33, 255, 0.5);
+  }
+
+  /* Search Bar - Glassmorphism */
+  .search-container {
+    margin-bottom: 25px;
+  }
+  .search-container .input-group {
+    box-shadow: 0 0 20px rgba(106, 17, 203, 0.5);
+  }
+  .search-container input {
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--neon-accent) !important;
+    color: white !important;
+  }
+  .search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+  .search-container .btn-primary {
+    background: var(--neon-accent);
+    border: none;
+  }
+
+  /* Event Cards - Hover Glow Effect */
+  .event-card {
+    background: var(--glass-bg);
+    border: 1px solid rgba(138, 43, 226, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(183, 33, 255, 0.4);
+    border-color: var(--neon-accent);
+  }
+  .card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 20px;
+  }
+  .card-title {
+    font-weight: 600;
+    color: #fff;
+  }
+  .card-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
+  }
+  .card-text strong {
+    color: #fff;
+  }
+
+  /* Buttons - Neon Style */
+  .btn-group .btn {
+    border-radius: 5px !important;
+    margin-right: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+  .btn-primary {
+    background: var(--secondary-purple);
+    border: none;
+  }
+  .btn-primary:hover {
+    background: var(--neon-accent);
+    box-shadow: 0 0 10px var(--neon-accent);
+  }
+  .btn-danger {
+    background: #ff3860;
+    border: none;
+  }
+  .btn-danger:hover {
+    box-shadow: 0 0 10px #ff3860;
+  }
+  .btn-info {
+    background: #00b4d8;
+    border: none;
+  }
+  .btn-info:hover {
+    box-shadow: 0 0 10px #00b4d8;
+  }
+
+  /* Modal - Dark Glass Theme */
+  .modal-content {
+    background: var(--glass-bg);
+    border: 1px solid var(--neon-accent);
+    backdrop-filter: blur(10px);
+  }
+  .modal-header {
+    border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+  }
+  .modal-title {
+    color: #fff;
+  }
+  .table {
+    color: #fff;
+  }
+  .table th {
+    border-bottom: 1px solid var(--neon-accent);
+  }
+
+  /* No Events Text */
+  .text-center {
+    color: rgba(255, 255, 255, 0.7);
+  }

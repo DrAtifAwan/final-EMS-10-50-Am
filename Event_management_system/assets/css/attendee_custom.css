@@ -1,0 +1,197 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Body Styling */
+/* Using a simple two-color gradient – light purple and light pink */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d6b3ff, #ffcce6);
+  background-size: cover;
+  color: #333;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Navbar – Top Navigation */
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  /* A simple solid color for now */
+  color: #fff;
+}
+
+/* Sidebar – Left Navigation */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: rgba(50, 50, 50, 0.9);
+  padding: 15px 0;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+.sidebar a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.sidebar a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Main Content Area – leave room for the sidebar */
+.container-fluid {
+  margin-left: 250px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Table Styling */
+/* A simple clean table in Bootstrap style with custom header */
+.table {
+  width: 100%;
+  margin: 20px 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #333;
+}
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.table th {
+  background-color: #6d6875;  /* Dark/muted purple */
+  color: #fff;
+}
+.table td {
+  background-color: #f3e5f5;  /* Light purple background */
+}
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Styling */
+/*
+   Remove heavy custom backgrounds here so that Bootstrap's default
+   classes like .btn-success, .btn-info, etc. can work correctly.
+   Simply define minimal styling (such as border-radius and padding)
+   and let the actual color classes be applied by Bootstrap.
+*/
+.btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: none;
+}
+
+/* If you want custom styling for functional buttons across your attendee dashboard,
+   you can either use your own classes (like .btn-attend) or simply use Bootstrap’s defaults:
+   For example, in your HTML use:
+   <button class="btn btn-success"><i class="bi bi-check-circle"></i> Attend</button>
+   <button class="btn btn-warning"><i class="bi bi-question-circle"></i> Maybe</button>
+   <button class="btn btn-danger"><i class="bi bi-x-circle"></i> Decline</button>
+   <button class="btn btn-info"><i class="bi bi-eye"></i> View</button>
+*/
+   
+/* Form Controls */
+.form-control {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px;
+  background: transparent;
+  color: #fff;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Alerts */
+.alert {
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.alert-info {
+  background: #b5838d;
+  color: white;
+}
+.alert-info:hover {
+  opacity: 0.9;
+}
+
+/* Utility Classes */
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.hidden {
+  display: none;
+}
+/* Custom Overrides for Button Classes */
+
+.btn-success {
+  background-color: #43f328 !important; /* Muted purple */
+  border: none !important;
+  color: #fff !important;
+}
+.btn-success:hover {
+  background-color: #b649bc !important;
+  color: #fff !important;
+}
+
+.btn-warning {
+  background-color: #f4ff22 !important; /* Light purple variant */
+  border: none !important;
+  color: #fff !important;
+}
+.btn-warning:hover {
+  background-color: #c963c2 !important;
+  color: #fff !important;
+}
+
+.btn-danger {
+  background-color: #ed252c !important; /* Light pink variant */
+  border: none !important;
+  color: #cb5bd3 !important;
+}
+.btn-danger:hover {
+  background-color: #c360c0 !important;
+  color: #fff !important;
+}
+
+.btn-info {
+  background-color: #830bec !important; /* Soft light pink */
+  border: none !important;
+  color: #fff !important;
+}
+.btn-info:hover {
+  background-color: #ffbacc !important;
+  color: #fff !important;
+}
+
